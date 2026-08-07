@@ -15,4 +15,9 @@ public class UserController {
     public User Register(@RequestBody User user){
         return service.PasswordEncode(user);
     }
+
+    @PostMapping("/Login")
+    public String Login(@RequestBody User loginrequest){
+        return service.loginRequest(loginrequest);
+    }
 }
